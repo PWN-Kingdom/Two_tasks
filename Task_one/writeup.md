@@ -25,6 +25,9 @@ https://cloudsek.com/threatintelligence/malicious-crypto-miners-compromise-acade
 Затем я пошел в Гугл, и он меня не разочаровал:
 
   [11+ суперкомпьютеров было взломано криптомайнерами](https://securityboulevard.com/2020/05/11-plus-supercomputers-hacked-with-cryptominers-by-china/)
+  
   [Вредоносные крипто-майнеры ставят под угрозу академические центры обработки данных](https://cloudsek.com/threatintelligence/malicious-crypto-miners-compromise-academic-data-centers/)
+  
   [Просмотр недавних атак на суперкомпьютерные системы с точки зрения анализа угроз](https://www.freebuf.com/vuls/237119.html)
   
+  Отсюда делаю вывод, что данный IP - сервер Китайской Научно-Технической сети. Этот IP адрес использовался как трамплин для компрометации суперкомпьютера в недавнем инциденте.
