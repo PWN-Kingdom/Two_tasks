@@ -9,7 +9,7 @@
 
 
 ##  Умение анализировать код. Нужно найти ключ и описать, как это было сделано?
-https://cloudsek.com/threatintelligence/malicious-crypto-miners-compromise-academic-data-centers/
+
 
 
 
