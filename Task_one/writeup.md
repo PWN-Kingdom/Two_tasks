@@ -1,1 +1,30 @@
-**Hello**
+# Задание №1
+
+
+
+
+##  За что отвечает файл [link](https://github.com/misterch0c/shadowbroker/blob/master/windows/Resources/TeDi/PyScripts/sigs.py)? Зачем он нужен и как может использоваться? Какой группой он мог быть использован? На основании открытых источников составьте список (с ссылками) соотношения сигнатур и известных АПТ-групп.
+
+
+
+
+##  Умение анализировать код. Нужно найти ключ и описать, как это было сделано?
+https://cloudsek.com/threatintelligence/malicious-crypto-miners-compromise-academic-data-centers/
+
+
+
+##  В какой атаке засветился IP 159.226.234.29?
+
+Где же засветился этот IP адрес? Первое что я сделал - это посмотрел информацию об этом IP адресе с помощью сервиса [2ip](https://2ip.ru/whois/).
+
+![](info_ip.png)
+
+Хм, Китай, да к тому же провайдер - Китайская Научно-Тухническая сеть.
+> Мой интерес подогревается.
+
+Затем я пошел в Гугл, и он меня не разочаровал:
+
+  [11+ суперкомпьютеров было взломано криптомайнерами](https://securityboulevard.com/2020/05/11-plus-supercomputers-hacked-with-cryptominers-by-china/)
+  [Вредоносные крипто-майнеры ставят под угрозу академические центры обработки данных](https://cloudsek.com/threatintelligence/malicious-crypto-miners-compromise-academic-data-centers/)
+  [Просмотр недавних атак на суперкомпьютерные системы с точки зрения анализа угроз](https://www.freebuf.com/vuls/237119.html)
+  
