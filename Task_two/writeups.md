@@ -35,33 +35,33 @@ Wrong answer! You've pissed of the Gods!
 
 ![](print_flag.png)
 
-Т.к. я уже могу свободно перемещаться по лабиринту, я начал его изучать играя. Было досадно, когда я заметил, что они отличается от лабиринта в файле maze.txt, но т.к. этот файл участвует в программе я дулаю предположение, что во время считывания он как-то видоизменяется, ну, не страшно.
+Т.к. я уже могу свободно перемещаться по лабиринту, я начал его изучать играя. Было досадно, когда я заметил, что они отличается от лабиринта в файле maze.txt, но т.к. этот файл участвует в программе я дeлаю предположение, что во время считывания он как-то видоизменяется. Ну, не страшно.
 
 Мне было интересно нарисовать карту, да и игра в целом забавная. Я написал скрипт, который автоматически проверят ближайшие четыре клетки на наличие препятствий
 
 ```bash
-  a=""                        
+  a=""            
 
   echo -e "$a""u\n1\n1" | wine ./test | tail -n 3 > file
   echo -n "UP     ->      "
-  cat file | grep -o "wall"
-  cat file | grep -o "bomb"       
-  cat file | grep -o "step"
+  cat file | grep -v "direction" | tail -n 2 | grep -o "wall"      
+  cat file | tail -n 1 | grep -o "bomb"
+  cat file | grep -v "direction" | tail -n 2 | grep -o "step"
 
   echo -e "$a""d\n1\n1" | wine ./test | tail -n 3 > file
   echo -n "DOWN   ->      "
-  cat file | grep -o "wall"
-  cat file | grep -o "bomb"       
-  cat file | grep -o "step"
+  cat file | grep -v "direction" | tail -n 2 | grep -o "wall"      
+  cat file | tail -n 1 | grep -o "bomb"
+  cat file | grep -v "direction" | tail -n 2 | grep -o "step"
 
   echo -e "$a""l\n1\n1" | wine ./test | tail -n 3 > file
   echo -n "LEFT   ->      " 
-  cat file | grep -o "wall"
-  cat file | grep -o "bomb"       
-  cat file | grep -o "step"
+  cat file | grep -v "direction" | tail -n 2 | grep -o "wall"      
+  cat file | tail -n 1 | grep -o "bomb"
+  cat file | grep -v "direction" | tail -n 2 | grep -o "step"
 
   echo -e "$a""r\n1\n1" | wine ./test | tail -n 3 > file
-  echo -ne "RIGHT ->      " 
+  echo -n "RIGHT  ->      " 
   cat file | grep -v "direction" | tail -n 2 | grep -o "wall"      
   cat file | tail -n 1 | grep -o "bomb"
   cat file | grep -v "direction" | tail -n 2 | grep -o "step"
