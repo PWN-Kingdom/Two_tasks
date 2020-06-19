@@ -10,6 +10,62 @@
 
 ##  Умение анализировать код. Нужно найти ключ и описать, как это было сделано?
 
+Я был немного удивлен, когда увидел обфусцированный питоновский скрипт. Но восстановить это бедстие было совсем несложно. Я решил пойти попорядку
+```python
+  if __name__ == '__main__':
+    O000O000O0OO00000O00()  
+```
+O000O000O0OO00000O00 - Это имя функции, с помощью Ctr + F ищу тукую же последовательность и переименовываю ее в function_one
+```python
+  if __name__ == '__main__':
+    function_one()
+```
+Перехожу к function_one, чтобы привести ее к читабельному виду
+```python
+  def function_one():
+    OO0OOOO0OO0OO0OO000O = input('> ')              # Мой ввод сохраняется в некоторую переменную
+    if O0O0O0O0OO0O000OOOO0(OO0OOOO0OO0OO0OO000O):  # Вызов функции с переменной, содержащей мой ввод
+        print('Ok')
+    else:
+        print('No')
+```
+Немного магии и получается следующий читаемый вид
+```python
+  def function_one():
+    my_input = input('> ')
+    if function_two(my_input):
+        print('Ok')
+    else:
+        print('No')
+```
+Перехожу к function_two, действия аналогичны предыдущим
+```python
+  def function_two(my_input):
+    O0O000OOO0OOOOO0OO0O = OO0OOO0OOOOO0000OOO0(my_input)                     # Вызов функции и сохранение возвращаемого значения в переменную
+    O00OOO0O0OO0OOOOO000(O0O000OOO0OOOOO0OO0O)    # Вызов функции
+    OOO0O0000O0O0O00OO0O(O0O000OOO0OOOOO0OO0O)    # Вызов функции
+    OO0O0OO0O00O0000OO0O(O0O000OOO0OOOOO0OO0O)    # Вызов функции
+    print(O0O000OOO0OOOOO0OO0O)                   # Вывод переменной
+    return O0O00O0OO00OO0O00OO0(O0O000OOO0OOOOO0OO0O, O0O0O00OO0OO0OOOOOO0)   # Вызов функции с двумя параметрами и возврат возвращаемого значения функции
+```
+Читаемый вариант выгядит так:
+```python
+  def function_two(my_input):
+    result = function_three(my_input)
+    function_four(result)
+    function_five(result)
+    function_six(result)
+    print(result)
+    return function_seven(result, two_array)
+```
+Остальные переведенные функции приводить здесь не буду, прикреплю файлик с полностью читаемым кодом. 
+
+Дело за малым, разбираем код и находим ключ. Я какое-то время думал, какой ключ от меня хотят, но оказалось, что ключом является мой ввод.
+ 
+
+
+
+
 
 
 
