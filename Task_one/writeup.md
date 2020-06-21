@@ -1,11 +1,67 @@
 # Задание №1
 
 
+##  За что отвечает файл [sigs.py](https://github.com/misterch0c/shadowbroker/blob/master/windows/Resources/TeDi/PyScripts/sigs.py)? Зачем он нужен и как может использоваться? Какой группой он мог быть использован? На основании открытых источников составьте список (с ссылками) соотношения сигнатур и известных АПТ-групп.
+
+#### Предыстория
+В 2016 году группировка The Shadow Brokers похитила хакерских инструментарий Агентства национальной безопасности США (АНБ). Тогда хакеры объясняли, что ранее эти инструменты принадлежали Equation Group – хакерской группе, которую ИБ-эксперты давно связали с АНБ напрямую. Долгое время хакеры пытались продать похищенную правительственную малварь, но в итоге так и не нашли покупателей. В результате весной 2017 года хакеры решили опубликовать дамп «Трудности перевода» (Lost in Translation) бесплатно, в открытом доступе.
+
+>	Взято из журнала [Хакер](https://xakep.ru/2020/04/23/nazar-apt/)
+
+Среди обнародованных The Shadow Brokers файлов оказался файл [sigs.py](https://github.com/misterch0c/shadowbroker/blob/master/windows/Resources/TeDi/PyScripts/sigs.py).
+
+Считается, что этот файл – это простейший сканер малвари, который операторы АНБ использовали на взломанных компьютерах, чтобы обнаруживать следы активности различных «конкурирующих» хакерских групп. Sigs.py содержит 44 сигнатуры для обнаружения файлов (хакерских утилит), развернутых другими взломщиками. Сигнатуры были пронумерованы от 1 до 45, но номер 42 отсутствовал.
 
 
-##  За что отвечает файл [link](https://github.com/misterch0c/shadowbroker/blob/master/windows/Resources/TeDi/PyScripts/sigs.py)? Зачем он нужен и как может использоваться? Какой группой он мог быть использован? На основании открытых источников составьте список (с ссылками) соотношения сигнатур и известных АПТ-групп.
+| Signature Number  | Possible APT other name  |
+| ----------------- |:------------------------:|
+|      SIG1         |    Agent.BTZ (Turla?)    |
+|      SIG2         |    Turla        	       |
+|      SIG3         |    ShipUp?    	       |
+|      SIG4         |	 Snake/Uroburos        |
+|      SIG5         |	 Trojan dropper Agent.ikcb Turla tool?		       |
+|      SIG6         |	 ?		       |
+|      SIG7         |	 GhoTex		       |
+|      SIG8         |	 Stuxnet 2 drivers unknown s7otbxdxa.sys s7obxsx.sys	       |
+|      SIG9         |	 Flame		       |
+|      SIG10        |	 miniFlame   	       |
+|      SIG11        |	 ?		       |
+|      SIG12        |	 Spuler?	       |
+|      SIG13        |	 Agent.BTZ?	       |
+|      SIG14        |	 ?		       |
+|      SIG15        |	 Turla/Snake/Uroburos  |
+|      SIG16        |	 Flame		       |
+|      SIG17        |	 SunFlower/ Chesire Cat / Flowershop		       |
+|      SIG18        |	 Moonflower/ Chesire Cat / Flowershop (sunflower moonflower)	|
+|      SIG19        |	 ?		       |
+|      SIG20        |	 Animal Farm	       |
+|      SIG21        |	 ?		       |
+|      SIG22        |	 Aurora/Hydraq	       |
+|      SIG23        |	 Turla (Epic Turla)    |
+|      SIG24        |	 ?		       |
+|      SIG25        |	 Dark Hotel 	       |
+|      SIG26        |	 ?		       |
+|      SIG27        |	 ?		       |
+|      SIG28        |	 Rotinom	       |
+|      SIG29        |	 ?		       |
+|      SIG30        |	 Exforel	       |
+|      SIG31        |	 ?		       |
+|      SIG32        |	 ?		       |
+|      SIG33        |	 ?		       |
+|      SIG34        |	 ?		       |
+|      SIG35        |	 Duqu		       |
+|      SIG36        |	 Stuxnet/Duqu?	       |
+|      SIG37        |	 Nazar APT	       |
+|      SIG38        |	 ?		       |
+|      SIG39        |	 Teamspy	       |
+|      SIG40        |	 Sednit/Sofacy	       |
+|      SIG41        |	 ?		       |
+|      SIG42        |	 ?		       |
+|      SIG43        |	 Turla		       |
+|      SIG44        |	 ?		       |
+|      SIG45        |	 ?		       |
 
-
+> При составлении таблицы использовался [Technical ReportbyLaboratory of Cryptography and System Security](https://www.crysys.hu/publications/files/tedi/ukatemicrysys_territorialdispute.pdf)
 
 
 ##  Умение анализировать код. Нужно найти ключ и описать, как это было сделано?
